@@ -2,8 +2,8 @@ import java.util.Iterator;
 import java.util.Random;
 
 public class Randoms implements Iterable<Integer> {
-    int min;
-    int max;
+    protected int min;
+    protected int max;
 
     public Randoms(int min, int max) {
         this.min = min;
@@ -27,11 +27,6 @@ public class Randoms implements Iterable<Integer> {
                 return random.nextInt((int) (min + Math.random() * max));
             }
         };
-    }
-
-    @Override
-    public boolean hasNext() {
-        return true;
     }
 }
 
